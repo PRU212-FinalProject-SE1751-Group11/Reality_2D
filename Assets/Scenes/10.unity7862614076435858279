@@ -1023,7 +1023,7 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-<<<<<<< ours
+<<<<<<< Updated upstream
     - target: {fileID: 9058432334822667186, guid: 637dceb549dd00c49a75775758f58190, type: 3}
       propertyPath: m_LocalPosition.x
       value: -7.73
@@ -1051,7 +1051,7 @@ PrefabInstance:
     - target: {fileID: 9058432334822667186, guid: 637dceb549dd00c49a75775758f58190, type: 3}
       propertyPath: m_LocalPosition.x
       value: 6.96
->>>>>>> theirs
+>>>>>>> Stashed changes
       objectReference: {fileID: 0}
     - target: {fileID: 9058432334822667186, guid: 637dceb549dd00c49a75775758f58190, type: 3}
       propertyPath: m_LocalPosition.y
