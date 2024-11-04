@@ -1,36 +1,61 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class PlayerMovement : MonoBehaviour
 {
-	[SerializeField]
-	private float moveSpeed = 3.5f;
+    [SerializeField]
+    private float moveSpeed = 3.5f;
 
-	private Rigidbody2D rb;
+    private Rigidbody2D rb;
+    private Vector2 moveInput;
+    private Animator animator;
 
-	private Vector2 moveInput;
+    public LayerMask interacablesLayer;
+    public float interactionRange = 1.0f;
 
-	private Animator animator;
-	void Start()
-	{
-		rb = GetComponent<Rigidbody2D>();
-		animator = GetComponent<Animator>();
-	}
-	void FixedUpdate()
-	{
-		rb.velocity = moveInput * moveSpeed;
-	}
-	public void move(InputAction.CallbackContext context)
-	{
-		moveInput = context.ReadValue<Vector2>();
-		animator.SetBool("isMoving", true);
-		if (!context.canceled && moveInput.x != 0)
-		{
-			animator.SetFloat("lastInputX", moveInput.x);
-		}
-		animator.SetBool("isMoving", !context.canceled);
-		animator.SetFloat("inputX", moveInput.x);
-	}
+    private void Start()
+    {
+        rb = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
+    }
+
+    private void FixedUpdate()
+    {
+        rb.velocity = moveInput * moveSpeed;
+    }
+
+    private void Update()
+    {
+
+        if (Input.GetKeyDown(KeyCode.Z))
+        {
+            Interact();
+        }
+    }
+
+    private void Interact()
+    {
+        Vector2 interactPosition = rb.position + moveInput.normalized * interactionRange;
+        Collider2D collider = Physics2D.OverlapCircle(interactPosition, 0.1f, interacablesLayer);
+        if (collider != null)
+        {
+            var interactable = collider.GetComponent<Interactable>();
+            if (interactable != null)
+            {
+                interactable.Interact();
+            }
+        }
+    }
+
+    public void Move(InputAction.CallbackContext context)
+    {
+        moveInput = context.ReadValue<Vector2>();
+        animator.SetBool("isMoving", true);
+        if (!context.canceled && moveInput.x != 0)
+        {
+            animator.SetFloat("lastInputX", moveInput.x);
+        }
+        animator.SetBool("isMoving", !context.canceled);
+        animator.SetFloat("inputX", moveInput.x);
+    }
 }
