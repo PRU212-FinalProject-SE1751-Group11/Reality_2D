@@ -31,7 +31,7 @@ public class PlayerMovement : MonoBehaviour
         }
         else if (moveInput == Vector2.zero && audioSource.isPlaying)
         {
-            audioSource.Stop(); 
+            audioSource.Stop();     
         }
     }
 
