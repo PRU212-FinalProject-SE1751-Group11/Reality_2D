@@ -2245,7 +2245,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0a167ea229cb454abc0a5cb3fc8e1d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interactionIcon: {fileID: 0}
+  interactionIcon: {fileID: 922667564}
   player: {fileID: 389290457}
   interactionDistance: 3
 --- !u!1 &1670641590
