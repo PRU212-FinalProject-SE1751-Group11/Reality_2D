@@ -5,7 +5,7 @@ using UnityEngine;
 public enum DialogCondition
 {
     FirstMeeting,
-    AfterQuest1,
+    OpenMind,
     General
 }
 
@@ -14,7 +14,7 @@ public class GameState : MonoBehaviour
     public static GameState Instance { get; private set; }
 
     public bool hasMetNPC;
-    public bool completedQuest1;
+    public bool OpenMind;
 
     private void Awake()
     {
