@@ -17,14 +17,17 @@ public class NPCController : MonoBehaviour, Interactable
     {
         foreach (Dialog dialog in dialogues)
         {
-            if ((dialog.Condition == DialogCondition.General))
-            //(GameState.Instance.hasMetNPC && !GameState.Instance.completedQuest1 && dialog.Condition == DialogCondition.FirstMeeting) ||
-            //(!GameState.Instance.hasMetNPC && dialog.Condition == DialogCondition.General))
+            // Check if the quest is completed and show the specific dialog for that condition
+            if (GameState.Instance.OpenMind && dialog.Condition == DialogCondition.OpenMind)
+            {
+                return dialog;
+            }
+            // If the player has met the NPC but hasn't completed the quest, show the general dialog
+            else if (!GameState.Instance.OpenMind && dialog.Condition == DialogCondition.General)
             {
                 return dialog;
             }
         }
-
         return dialogues.Find(d => d.Condition == DialogCondition.General);
     }
 }

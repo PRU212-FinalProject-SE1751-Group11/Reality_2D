@@ -9,6 +9,7 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody2D rb;
     private Vector2 moveInput;
     private Animator animator;
+    private AudioSource audioSource;
 
     public LayerMask interacablesLayer;
     public float interactionRange = 1.0f;
@@ -17,16 +18,25 @@ public class PlayerMovement : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+        audioSource = GetComponent<AudioSource>(); 
     }
 
     private void FixedUpdate()
     {
         rb.velocity = moveInput * moveSpeed;
+
+        if (moveInput != Vector2.zero && !audioSource.isPlaying)
+        {
+            audioSource.Play();
+        }
+        else if (moveInput == Vector2.zero && audioSource.isPlaying)
+        {
+            audioSource.Stop(); 
+        }
     }
 
     private void Update()
     {
-
         if (Input.GetKeyDown(KeyCode.Z))
         {
             Interact();

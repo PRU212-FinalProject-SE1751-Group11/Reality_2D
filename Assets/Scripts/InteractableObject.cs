@@ -6,14 +6,9 @@ public class InteractableObject : MonoBehaviour, Interactable
 {
    public void Interact()
     {
-        if (!GameState.Instance.completedQuest1)
+        if (!GameState.Instance.OpenMind)
         {
-            GameState.Instance.completedQuest1 = true;
-            Debug.Log("Quest 1 completed!");
-        }
-        else
-        {
-            Debug.Log("Quest 1 has already been completed.");
+            GameState.Instance.OpenMind = true;
         }
     }
 
