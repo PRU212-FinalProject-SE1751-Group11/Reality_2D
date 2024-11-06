@@ -60,9 +60,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71c1514a6bd24e1e882cebbe1904ce04, type: 3}
   m_Name: NightsideDemoRegular SDF
   m_EditorClassIdentifier: 
-  hashCode: 0
+  hashCode: 312433551
   material: {fileID: 5012104699441610332}
-  materialHashCode: 0
+  materialHashCode: -2098600241
   m_Version: 1.1.0
   m_SourceFontFileGUID: b6b764c2e73ead64fb63b4398b9ba207
   m_SourceFontFile_EditorRef: {fileID: 12800000, guid: b6b764c2e73ead64fb63b4398b9ba207, type: 3}
@@ -2707,9 +2707,9 @@ Material:
     - _OutlineWidth: 0
     - _PerspectiveFilter: 0.875
     - _Reflectivity: 10
-    - _ScaleRatioA: 1
-    - _ScaleRatioB: 1
-    - _ScaleRatioC: 1
+    - _ScaleRatioA: 0.8888889
+    - _ScaleRatioB: 0.7222222
+    - _ScaleRatioC: 0.7222222
     - _ScaleX: 1
     - _ScaleY: 1
     - _ShaderFlags: 0
