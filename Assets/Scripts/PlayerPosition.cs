@@ -31,7 +31,7 @@ public class PlayerPositionManager : MonoBehaviour
             else
             {
                 player.transform.position = rightSpawnPoint.position;
-                playerAnimator.Play("idleRight");
+                playerAnimator.Play("idleLeft");
             }
         }
         else
@@ -41,19 +41,19 @@ public class PlayerPositionManager : MonoBehaviour
             if (string.IsNullOrEmpty(entryPoint))
             {
                 player.transform.position = defaultSpawn.position;
-                playerAnimator.Play("idleLeft");
+                playerAnimator.Play("idleRight");
             }
             else
             {
                 if (entryPoint == "Left")
                 {
                     player.transform.position = rightSpawnPoint.position;
-                    playerAnimator.Play("idleRight");
+                    playerAnimator.Play("idleLeft");
                 }
                 else if (entryPoint == "Right")
                 {
                     player.transform.position = leftSpawnPoint.position;
-                    playerAnimator.Play("idleLeft");
+                    playerAnimator.Play("idleRight");
                 }
             }
         }

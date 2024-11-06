@@ -244,7 +244,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 0f89bb83dd73d344b834f9e4af1981cd, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.52
+  m_Volume: 0.29
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -318,7 +318,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0.82
+      value: 0.64
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -670,7 +670,7 @@ MonoBehaviour:
   videoPlayer: {fileID: 1819084071}
   audioSource: {fileID: 679866070}
   smoothText: {fileID: 2047232615}
-  nextSceneName: 10
+  nextSceneName: 001
 --- !u!1 &2047232613
 GameObject:
   m_ObjectHideFlags: 0

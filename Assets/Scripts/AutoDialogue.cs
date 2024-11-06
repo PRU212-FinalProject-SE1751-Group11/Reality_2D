@@ -1,24 +1,27 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class AutoDialogue : MonoBehaviour
 {
     public GameObject dialogBox;
     public Dialog dialog;
-
+    public float showTime = 2f;
+    public float startDelay = 2f;
+    public string sceneChange;
     private void Start()
     {
-        StartCoroutine(ShowDialog());
-    }
-    private IEnumerator ShowDialog()
-    {
-        yield return new WaitForSeconds(2f);
-
-        if (!dialogBox.activeInHierarchy)
+        //PlayerPrefs.SetInt("DialogShown", 0);
+        if (PlayerPrefs.GetInt("DialogShown", 0) == 0)
         {
-            DialogueManager.Instance.ShowDialog(dialog);
+            PlayerPrefs.SetInt("DialogShown", 1);
+            StartCoroutine(ShowDialogAfterDelay());
         }
+    }
+
+    private IEnumerator ShowDialogAfterDelay()
+    {
+        yield return new WaitForSeconds(startDelay);
+        DialogueAutoManager.Instance.ShowDialog(dialog, sceneChange, showTime);
     }
 
     private void OnTriggerExit2D(Collider2D other)

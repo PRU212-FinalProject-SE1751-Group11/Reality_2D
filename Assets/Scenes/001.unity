@@ -135,7 +135,7 @@ GameObject:
   - component: {fileID: 506499877}
   - component: {fileID: 506499876}
   m_Layer: 0
-  m_Name: StartScene1_0
+  m_Name: player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -392,7 +392,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 681619402}
-  - component: {fileID: 681619401}
+  - component: {fileID: 681619403}
   m_Layer: 0
   m_Name: DialogueManager
   m_TagString: Untagged
@@ -400,22 +400,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &681619401
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 681619400}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0207c358c48e254d9799940ffb7d543, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialogBox: {fileID: 1477038985}
-  nameText: {fileID: 521192003}
-  dialogText: {fileID: 899518417}
-  letterPerSecs: 40
 --- !u!4 &681619402
 Transform:
   m_ObjectHideFlags: 0
@@ -431,6 +415,22 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &681619403
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 681619400}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 535e92c05db392745a79a65c4b1f507e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogBox: {fileID: 1477038985}
+  nameText: {fileID: 521192003}
+  dialogText: {fileID: 899518417}
+  letterPerSecs: 20
 --- !u!1 &858509648
 GameObject:
   m_ObjectHideFlags: 0
@@ -810,8 +810,9 @@ GameObject:
   m_Component:
   - component: {fileID: 987638050}
   - component: {fileID: 987638049}
+  - component: {fileID: 987638051}
   m_Layer: 0
-  m_Name: StartScene1_3
+  m_Name: sister
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -884,6 +885,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &987638051
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 987638048}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 6bbe63682ac7c7d4a8e484de51b2415b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1090183469
 GameObject:
   m_ObjectHideFlags: 0
@@ -1140,7 +1162,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1270352862}
   - component: {fileID: 1270352861}
-  - component: {fileID: 1270352863}
+  - component: {fileID: 1270352864}
   m_Layer: 0
   m_Name: SceneTransition
   m_TagString: Untagged
@@ -1178,7 +1200,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1270352863
+--- !u!114 &1270352864
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1187,15 +1209,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 1270352860}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dec9d7736e2f2b5489d070d2f99e544c, type: 3}
+  m_Script: {fileID: 11500000, guid: 9f3b5c1eb57d0434eb3d4fc99ede9852, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogBox: {fileID: 1477038985}
+  dialogBox: {fileID: 0}
   dialog:
     name: 
     lines:
     - 12:03 .AM [13/10/2003] - Way Back Home
-    condition: 2
+    condition: 3
+    triggers: []
+  showTime: 4
+  startDelay: 2
+  sceneChange: 
 --- !u!1 &1477038985
 GameObject:
   m_ObjectHideFlags: 0

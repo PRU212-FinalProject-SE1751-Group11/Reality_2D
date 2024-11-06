@@ -819,16 +819,29 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogues:
-  - name: '?'
+  - name: Guy
     lines:
     - Ah.... It's so windy out here
     - And this lighter doesn't work
-    condition: 2
-  - name: '?'
+    condition: 6
+    triggers: []
+  - name: Guy
     lines:
-    - 
-    - 
-    condition: 1
+    - ' Hey man! That lighter you holding, can i borrow it?'
+    - Ah...That hits the spot.
+    - You know what man, this was going to be my last cigarette.
+    - I was going to retired from the force too.
+    - After this last train ride, i'll go home and see my family.
+    - 'Anyway, I see your face looks quite worried '
+    - You know what, I saw a little girl passing by here a couple hours ago.
+    - In her hand she held a bottle of medicine....In my experience, it was probably
+      a sedative or something related
+    - What did a child go through with something like that?
+    - (Sigh........)
+    condition: 3
+    triggers:
+    - condition: 4
+      value: 1
 --- !u!61 &666046289
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1723,7 +1736,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 955f09203ae3c8a4a85aadb7d239578b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hasMetNPC: 0
+  FirstMeeting: 0
+  GotKeyWest: 0
+  OnKeyWest: 0
+  DoneKeyWest: 0
+  DoneLighter: 0
   OpenMind: 0
 --- !u!4 &1582893505
 Transform:

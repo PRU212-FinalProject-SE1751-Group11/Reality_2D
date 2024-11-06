@@ -8,8 +8,10 @@ public class Dialog
     [SerializeField] string name;
     [SerializeField] List<string> lines;
     [SerializeField] DialogCondition condition;
+    [SerializeField] List<GameStateTrigger> triggers; 
 
     public List<string> Lines => lines;
     public string Name => name;
     public DialogCondition Condition => condition;
+    public List<GameStateTrigger> Triggers => triggers;
 }

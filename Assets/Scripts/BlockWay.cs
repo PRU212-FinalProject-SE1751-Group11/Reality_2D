@@ -28,7 +28,7 @@ public class BlockWay : MonoBehaviour
     {
         if (!dialogBox.activeInHierarchy)
         {
-            DialogueManager.Instance.ShowDialog(dialog);
+            DialogueAutoManager.Instance.ShowDialog(dialog,"");
         }
     }
 

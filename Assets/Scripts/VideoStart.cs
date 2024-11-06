@@ -35,7 +35,7 @@ public class VideoAudioSync : MonoBehaviour
     {
         timer += Time.deltaTime;
 
-        if (timer >= (float)videoPlayer.length - 50f)
+        if (timer >= (float)videoPlayer.length - 46f)
         {
             StartCoroutine(FadeOutMusicAndSwitchScene());
         }
