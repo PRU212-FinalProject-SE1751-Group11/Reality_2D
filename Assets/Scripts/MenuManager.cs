@@ -26,4 +26,12 @@ public class MenuManager : MonoBehaviour
         // Chuyển đổi scene
         SceneManager.LoadScene("AboutUs");
     }
+    void StartNewGame()
+    {
+
+    }
+    void LoadGame()
+    {
+
+    }
 }
