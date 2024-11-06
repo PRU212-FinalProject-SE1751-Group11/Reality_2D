@@ -10,7 +10,8 @@ public class NPCController : MonoBehaviour, Interactable
         if (appropriateDialog != null)
         {
             ApplyTriggers(appropriateDialog.Triggers);
-            DialogueManager.Instance.ShowDialog(appropriateDialog);
+            string sceneToLoad = (appropriateDialog.Condition == DialogCondition.DoneLighter) ? "00.1" : null;
+            DialogueManager.Instance.ShowDialog(appropriateDialog, sceneToLoad);
         }
     }
 
@@ -18,11 +19,7 @@ public class NPCController : MonoBehaviour, Interactable
     {
         foreach (Dialog dialog in dialogues)
         {
-            if (GameState.Instance.OpenMind && dialog.Condition == DialogCondition.OpenMind)
-            {
-                return dialog;
-            }
-            else if (GameState.Instance.FirstMeeting && dialog.Condition == DialogCondition.FirstMeeting)
+            if (GameState.Instance.FirstMeeting && dialog.Condition == DialogCondition.FirstMeeting)
             {
                 return dialog;
             }
@@ -39,6 +36,14 @@ public class NPCController : MonoBehaviour, Interactable
                 return dialog;
             }
             else if (GameState.Instance.DoneLighter && dialog.Condition == DialogCondition.DoneLighter)
+            {
+                return dialog;
+            }
+            else if (GameState.Instance.OpenMind && dialog.Condition == DialogCondition.OpenMind)
+            {
+                return dialog;
+            }
+            else if (GameState.Instance.OpenSecret && dialog.Condition == DialogCondition.OpenSecret)
             {
                 return dialog;
             }

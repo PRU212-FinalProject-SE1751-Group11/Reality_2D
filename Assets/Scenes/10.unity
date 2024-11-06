@@ -573,7 +573,7 @@ MonoBehaviour:
   - name: 
     lines:
     - Anna must be at the other side
-    condition: 6
+    condition: 7
     triggers: []
   - name: 
     lines:
@@ -1466,7 +1466,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &911311570
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1881,6 +1881,7 @@ MonoBehaviour:
   OnKeyWest: 0
   DoneKeyWest: 0
   DoneLighter: 0
+  OpenSecret: 0
   OpenMind: 0
 --- !u!4 &1455417376
 Transform:

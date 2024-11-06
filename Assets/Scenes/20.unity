@@ -1748,16 +1748,16 @@ MonoBehaviour:
   - name: 
     lines:
     - This little girl. . . . really looks a lot like my sister.
-    condition: 6
+    condition: 7
     triggers:
     - condition: 0
       value: 1
   - name: Little girl
     lines:
-    - bao cao phat hien hiep dam
+    - ' I always wanted to feel what it feels like to be alone....'
     condition: 4
     triggers:
-    - condition: 0
+    - condition: 5
       value: 1
 --- !u!114 &1542516282
 MonoBehaviour:
@@ -2346,6 +2346,7 @@ MonoBehaviour:
   OnKeyWest: 0
   DoneKeyWest: 0
   DoneLighter: 0
+  OpenSecret: 0
   OpenMind: 0
 --- !u!4 &2014976679
 Transform:
