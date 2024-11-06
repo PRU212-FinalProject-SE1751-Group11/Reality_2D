@@ -7,6 +7,8 @@ TagManager:
   - NPC
   - Sister
   - Right
+  - LeftTurn
+  - RightTurn
   layers:
   - Default
   - TransparentFX

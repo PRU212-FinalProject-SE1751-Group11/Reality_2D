@@ -6,8 +6,8 @@ using UnityEngine.UI;
 public class DialogueManager : MonoBehaviour
 {
     public GameObject dialogBox;
-    public Text nameText;      
-    public Text dialogText;    
+    public Text nameText;
+    public Text dialogText;
     public int letterPerSecs = 40;
 
     public static DialogueManager Instance { get; private set; }
@@ -25,9 +25,9 @@ public class DialogueManager : MonoBehaviour
         if (!dialogBox.activeInHierarchy)
         {
             dialogBox.SetActive(true);
-            nameText.text = dialog.Name;    
-            dialogLines = dialog.Lines;   
-            currentLineIndex = 0;         
+            nameText.text = dialog.Name;
+            dialogLines = dialog.Lines;
+            currentLineIndex = 0;
             StartCoroutine(TypeDialog(dialogLines[currentLineIndex]));
         }
         else

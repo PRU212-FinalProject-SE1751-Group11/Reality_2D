@@ -244,7 +244,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 0f89bb83dd73d344b834f9e4af1981cd, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.52
+  m_Volume: 0.29
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -318,7 +318,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0.82
+      value: 0.64
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -670,7 +670,7 @@ MonoBehaviour:
   videoPlayer: {fileID: 1819084071}
   audioSource: {fileID: 679866070}
   smoothText: {fileID: 2047232615}
-  nextSceneName: 10
+  nextSceneName: 001
 --- !u!1 &2047232613
 GameObject:
   m_ObjectHideFlags: 0
@@ -703,10 +703,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 986686219}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -83}
-  m_SizeDelta: {x: 1020, y: 314}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 89.55498, y: -150.37001}
+  m_SizeDelta: {x: -906.09, y: -300.74}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2047232615
 MonoBehaviour:
@@ -730,17 +730,17 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: a29fda87bd83c0643a5e611d2344d048, type: 3}
-    m_FontSize: 132
+    m_FontSize: 167
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 4
-    m_MaxSize: 134
+    m_MaxSize: 181
     m_Alignment: 0
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
-    m_LineSpacing: 1.02
+    m_LineSpacing: 1.2
   m_Text: Sometimes, the loudest voices are the ones inside your own mind
 --- !u!222 &2047232616
 CanvasRenderer:

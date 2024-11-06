@@ -4,11 +4,17 @@ using UnityEngine;
 
 public class InteractableObject : MonoBehaviour, Interactable
 {
-   public void Interact()
+    public List<DialogCondition> triggerConditions; 
+    public List<bool> desiredStates; 
+
+    public void Interact()
     {
-        if (!GameState.Instance.OpenMind)
+        for (int i = 0; i < triggerConditions.Count; i++)
         {
-            GameState.Instance.OpenMind = true;
+            if (i < desiredStates.Count)
+            {
+                GameState.Instance.SetState(triggerConditions[i], desiredStates[i]);
+            }
         }
     }
 
