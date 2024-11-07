@@ -1648,7 +1648,7 @@ GameObject:
   - component: {fileID: 911311572}
   - component: {fileID: 911311571}
   - component: {fileID: 911311573}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: MainMenu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
