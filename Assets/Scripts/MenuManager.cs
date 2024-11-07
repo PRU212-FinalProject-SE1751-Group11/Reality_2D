@@ -30,6 +30,11 @@ public class MenuManager : MonoBehaviour
     {
         Initiate.Fade("00",Color.black,1f);
     }
+
+    public void BackMainMenu()
+    {
+        Initiate.Fade("MenuUI", Color.black, 1f);
+    }
     public void LoadGame()
     {
         GameData loadedData = FileDataHandler.Load();
