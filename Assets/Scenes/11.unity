@@ -823,7 +823,7 @@ MonoBehaviour:
     lines:
     - Ah.... It's so windy out here
     - And this lighter doesn't work
-    condition: 6
+    condition: 7
     triggers: []
   - name: Guy
     lines:
@@ -1741,6 +1741,7 @@ MonoBehaviour:
   OnKeyWest: 0
   DoneKeyWest: 0
   DoneLighter: 0
+  OpenSecret: 0
   OpenMind: 0
 --- !u!4 &1582893505
 Transform:

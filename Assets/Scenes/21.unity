@@ -1308,7 +1308,7 @@ MonoBehaviour:
     - ' It doesn''t look very good...'
     - Hey young man! Can you get me the? I'm quite busy here
     - I just remember plugging it in at the west entrance...
-    condition: 6
+    condition: 7
     triggers:
     - condition: 1
       value: 1

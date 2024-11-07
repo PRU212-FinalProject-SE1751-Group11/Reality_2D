@@ -18,7 +18,7 @@ public class PlayerMovement : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
-        audioSource = GetComponent<AudioSource>(); 
+        audioSource = GetComponent<AudioSource>();
     }
 
     private void FixedUpdate()
@@ -31,7 +31,7 @@ public class PlayerMovement : MonoBehaviour
         }
         else if (moveInput == Vector2.zero && audioSource.isPlaying)
         {
-            audioSource.Stop();     
+            audioSource.Stop();
         }
     }
 

@@ -332,6 +332,10 @@ PrefabInstance:
       value: 256
       objectReference: {fileID: 0}
     - target: {fileID: 7916509790623885164, guid: 637dceb549dd00c49a75775758f58190, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7916509790623885164, guid: 637dceb549dd00c49a75775758f58190, type: 3}
       propertyPath: m_SpriteTilingProperty.newSize.x
       value: 2.4
       objectReference: {fileID: 0}
@@ -573,7 +577,7 @@ MonoBehaviour:
   - name: 
     lines:
     - Anna must be at the other side
-    condition: 6
+    condition: 7
     triggers: []
   - name: 
     lines:
@@ -953,30 +957,14 @@ GameObject:
   - component: {fileID: 647321011}
   - component: {fileID: 647321010}
   - component: {fileID: 647321009}
-  - component: {fileID: 647321014}
-  - component: {fileID: 647321008}
+  - component: {fileID: 647321015}
   m_Layer: 8
   m_Name: save_Star 1
-  m_TagString: Untagged
+  m_TagString: SaveStar
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!114 &647321008
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 647321007}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0a167ea229cb454abc0a5cb3fc8e1d6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  interactionIcon: {fileID: 250335711}
-  player: {fileID: 1192115722}
-  interactionDistance: 1
+  m_IsActive: 1
 --- !u!61 &647321009
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1034,7 +1022,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 186f4fba10f1d3748a4adbf33051d7db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  triggerConditions: 02000000
+  triggerConditions: 
   desiredStates: 
 --- !u!95 &647321011
 Animator:
@@ -1118,13 +1106,13 @@ Transform:
   m_GameObject: {fileID: 647321007}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.68, y: -2.08, z: 0}
+  m_LocalPosition: {x: -1.49, y: -3.17, z: 0}
   m_LocalScale: {x: 1.3, y: 1.3, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &647321014
+--- !u!114 &647321015
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1133,22 +1121,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 647321007}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 781621a828cdf4943a605579961f5455, type: 3}
+  m_Script: {fileID: 11500000, guid: b3633ff4db6097847b212e5fd5cbacba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogues:
-  - name: 
-    lines:
-    - There is a train key that plugged here
-    - You took the [key train]
-    condition: 1
-    triggers: []
-  - name: 
-    lines:
-    - There is a train key that plugged here
-    - You took the [key train]
-    condition: 1
-    triggers: []
 --- !u!1 &653465080
 GameObject:
   m_ObjectHideFlags: 0
@@ -1847,56 +1822,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &1455417374
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1455417376}
-  - component: {fileID: 1455417375}
-  m_Layer: 0
-  m_Name: GameStateManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1455417375
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1455417374}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 955f09203ae3c8a4a85aadb7d239578b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  FirstMeeting: 0
-  GotKeyWest: 0
-  OnKeyWest: 0
-  DoneKeyWest: 0
-  DoneLighter: 0
-  OpenMind: 0
---- !u!4 &1455417376
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1455417374}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.8062024, y: -1.2814851, z: -0.07660963}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1532338814
 GameObject:
   m_ObjectHideFlags: 0
@@ -2857,5 +2782,4 @@ SceneRoots:
   - {fileID: 647321013}
   - {fileID: 1686347537}
   - {fileID: 1157692017}
-  - {fileID: 1455417376}
   - {fileID: 1735566649}
