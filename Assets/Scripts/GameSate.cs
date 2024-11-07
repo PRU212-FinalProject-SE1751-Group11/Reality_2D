@@ -57,7 +57,7 @@ public class GameState : MonoBehaviour
                 break;
             case DialogCondition.OpenSecret:
                 OpenSecret = value;
-                break
+                break;
             case DialogCondition.OpenMind:
                 OpenMind = value;
                 break;
