@@ -1046,7 +1046,7 @@ MonoBehaviour:
   FirstMeeting: 0
   GotKeyWest: 0
   OnKeyWest: 0
-  DoneKeyWest: 1
+  DoneKeyWest: 0
   DoneLighter: 0
   OpenSecret: 0
   OpenMind: 0
