@@ -41,4 +41,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/BonkQuotes.unity
     guid: a7dcfe030ac6abf4ca050fa444bcff1c
+  - enabled: 1
+    path: Assets/Scenes/MatureEnding2.unity
+    guid: a7b1cdb36a01b564d8df214881e0b080
   m_configObjects: {}
