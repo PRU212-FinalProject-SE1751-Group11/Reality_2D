@@ -13,7 +13,9 @@ public class MenuManager : MonoBehaviour
         Button instructionButton = GameObject.Find("Button Instruction").GetComponent<Button>();
         instructionButton.onClick.AddListener(OnInstructionButtonClick);
         Button aboutUsButton = GameObject.Find("Button Aboutus").GetComponent<Button>();
+        Button exitButton = GameObject.Find("Button Exit").GetComponent<Button>();
         aboutUsButton.onClick.AddListener(OnAboutUsButtonClick);
+        exitButton.onClick.AddListener(Exit);
     }
 
     void OnInstructionButtonClick()
@@ -34,6 +36,11 @@ public class MenuManager : MonoBehaviour
     public void BackMainMenu()
     {
         Initiate.Fade("MenuUI", Color.black, 1f);
+    }
+
+    public void Exit()
+    {
+       Application.Quit();
     }
     public void LoadGame()
     {
