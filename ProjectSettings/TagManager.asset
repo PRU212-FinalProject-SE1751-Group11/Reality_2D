@@ -9,6 +9,7 @@ TagManager:
   - Right
   - LeftTurn
   - RightTurn
+  - End
   layers:
   - Default
   - TransparentFX

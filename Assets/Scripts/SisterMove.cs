@@ -6,8 +6,8 @@ using UnityEngine.SceneManagement;
 public class SisterMove : MonoBehaviour
 {
     public float moveSpeed = 3f;
-    private bool movingRight = true;
-
+    public bool movingRight = true;
+    public static bool isHandel = false;
     void Update()
     {
         if (movingRight)
@@ -34,6 +34,22 @@ public class SisterMove : MonoBehaviour
             Vector3 npcScale = transform.localScale;
             npcScale.x *= -1;
             transform.localScale = npcScale;
+        }
+
+        if (other.CompareTag("End"))
+        {
+            Destroy(gameObject);
+        }
+        if (other.CompareTag("Player"))
+        {
+            if (isHandel)
+            {
+                Initiate.Fade("BonkScene", Color.white, 0.5f);
+            }
+            else
+            {
+                Initiate.Fade("GoodEnd", Color.white, 0.5f);
+            }
         }
     }
 }
