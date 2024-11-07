@@ -60,7 +60,7 @@ EditorBuildSettings:
     path: Assets/Scenes/GoodEnd.unity
     guid: bd25e5af47d6e0d408be28fe84f3ff25
   - enabled: 1
-    path: Assets/Scenes/GoodEndFinall.unity
+    path: Assets/Scenes/GoodEndFinal.unity
     guid: 0ddc5d95997570543a4767ddc1772374
   - enabled: 1
     path: Assets/Scenes/MatureEnding.unity
