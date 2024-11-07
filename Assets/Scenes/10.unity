@@ -237,7 +237,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -814.2, y: 55.8}
+  m_AnchoredPosition: {x: 443.8, y: 55.8}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &250335713
@@ -955,7 +955,6 @@ GameObject:
   - component: {fileID: 647321013}
   - component: {fileID: 647321012}
   - component: {fileID: 647321011}
-  - component: {fileID: 647321010}
   - component: {fileID: 647321009}
   - component: {fileID: 647321015}
   - component: {fileID: 647321016}
@@ -1012,20 +1011,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.578125, y: 1.4311057}
   m_EdgeRadius: 0
---- !u!114 &647321010
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 647321007}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 186f4fba10f1d3748a4adbf33051d7db, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  triggerConditions: 
-  desiredStates: 
 --- !u!95 &647321011
 Animator:
   serializedVersion: 5
@@ -1158,7 +1143,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   interactionIcon: {fileID: 250335711}
   player: {fileID: 1192115722}
-  interactionDistance: 3
+  interactionDistance: 1
 --- !u!1 &653465080
 GameObject:
   m_ObjectHideFlags: 0
@@ -2274,6 +2259,7 @@ RectTransform:
   m_Children:
   - {fileID: 2112526292}
   - {fileID: 250335712}
+  - {fileID: 911311570}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -2714,3 +2700,4 @@ SceneRoots:
   - {fileID: 1686347537}
   - {fileID: 1735566649}
   - {fileID: 851439296}
+  - {fileID: 1455417376}

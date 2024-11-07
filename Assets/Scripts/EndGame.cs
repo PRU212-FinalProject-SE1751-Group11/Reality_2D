@@ -32,6 +32,6 @@ public class EndGame : MonoBehaviour
         }
 
         // Khi typing hoàn tất, gọi lệnh Fade
-        Initiate.Fade("Thanksplaying", Color.white, 0.5f);
+        Initiate.Fade("Thanksplaying", Color.white, 0.4f);
     }
 }

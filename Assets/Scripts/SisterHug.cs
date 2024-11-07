@@ -20,8 +20,7 @@ public class SisterHug : MonoBehaviour
 
     private void OnTriggerEnter2D()
     {
-        Debug.Log("Va chjam");
-        Initiate.Fade("002", Color.white, 0.35f);
+        Initiate.Fade("GoodEndFinal", Color.white, 0.35f);
      
     }
 }

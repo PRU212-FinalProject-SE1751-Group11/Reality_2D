@@ -1683,9 +1683,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1542516276}
   - component: {fileID: 1542516275}
-  - component: {fileID: 1542516277}
   - component: {fileID: 1542516278}
   - component: {fileID: 1542516279}
+  - component: {fileID: 1542516283}
   - component: {fileID: 1542516280}
   - component: {fileID: 1542516281}
   - component: {fileID: 1542516282}
@@ -1763,20 +1763,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1542516277
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1542516274}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8b6d5f7556336694796b58d23ec68b64, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 1
-  movingRight: 1
 --- !u!95 &1542516278
 Animator:
   serializedVersion: 5
@@ -1920,6 +1906,20 @@ MonoBehaviour:
   interactionIcon: {fileID: 888040056}
   player: {fileID: 162708213}
   interactionDistance: 3
+--- !u!114 &1542516283
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1542516274}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 919d16a5e18a6e9479220a389947de54, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 3
+  movingRight: 1
 --- !u!1 &1604944713
 GameObject:
   m_ObjectHideFlags: 0
