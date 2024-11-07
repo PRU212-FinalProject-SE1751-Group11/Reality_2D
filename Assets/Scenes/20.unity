@@ -1748,7 +1748,7 @@ MonoBehaviour:
   - name: 
     lines:
     - This little girl. . . . really looks a lot like my sister.
-    condition: 6
+    condition: 7
     triggers:
     - condition: 0
       value: 1
@@ -2346,6 +2346,7 @@ MonoBehaviour:
   OnKeyWest: 0
   DoneKeyWest: 0
   DoneLighter: 0
+  OpenSecret: 0
   OpenMind: 0
 --- !u!4 &2014976679
 Transform:

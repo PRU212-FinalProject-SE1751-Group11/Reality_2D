@@ -26,12 +26,29 @@ public class MenuManager : MonoBehaviour
         // Chuyển đổi scene
         SceneManager.LoadScene("AboutUs");
     }
-    void StartNewGame()
+    public void StartNewGame()
     {
-
+        Initiate.Fade("00",Color.black,1f);
     }
-    void LoadGame()
+    public void LoadGame()
     {
+        GameData loadedData = FileDataHandler.Load();
+        if (loadedData != null)
+        {
+            Debug.Log("Game Loaded Successfully");
+            GameState.Instance.SetState(DialogCondition.FirstMeeting, loadedData.FirstMeeting); // FirstMeeting is set to true
+            GameState.Instance.SetState(DialogCondition.GotKeyWest, loadedData.GotKeyWest); // GotKeyWest is set to true
+            GameState.Instance.SetState(DialogCondition.OnKeyWest, loadedData.OnKeyWest); // OnKeyWest is set to false
+            GameState.Instance.SetState(DialogCondition.DoneKeyWest, loadedData.DoneKeyWest); // DoneKeyWest is set to true
+            GameState.Instance.SetState(DialogCondition.DoneLighter, loadedData.DoneLighter); // DoneLighter is set to false
+            GameState.Instance.SetState(DialogCondition.OpenSecret, loadedData.OpenSecret); // OpenSecret is set to true
+            GameState.Instance.SetState(DialogCondition.OpenMind, loadedData.OpenMind);
 
+            Initiate.Fade("10", Color.black, 1f);
+        }
+        else
+        {
+            Debug.LogWarning("No saved game data to load");
+        }
     }
 }

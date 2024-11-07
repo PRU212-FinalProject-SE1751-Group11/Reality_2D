@@ -16,7 +16,7 @@ public enum DialogCondition
 
 public class GameState : MonoBehaviour
 {
-    public static GameState Instance { get; private set; }
+    public static GameState Instance { get; set; }
 
     public bool FirstMeeting;
     public bool GotKeyWest;
@@ -29,11 +29,14 @@ public class GameState : MonoBehaviour
     private void Awake()
     {
         if (Instance == null)
+        {
             Instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
         else
+        {
             Destroy(gameObject);
-
-        DontDestroyOnLoad(gameObject);
+        }
     }
 
     public void SetState(DialogCondition condition, bool value)
@@ -57,7 +60,7 @@ public class GameState : MonoBehaviour
                 break;
             case DialogCondition.OpenSecret:
                 OpenSecret = value;
-                break
+                break;
             case DialogCondition.OpenMind:
                 OpenMind = value;
                 break;
