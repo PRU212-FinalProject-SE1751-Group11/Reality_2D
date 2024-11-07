@@ -47,4 +47,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SemiEndScene.unity
     guid: e32300650aac23f418ff2f55df743c9f
+    path: Assets/Scenes/Thanksplaying.unity
+    guid: 6049eb001cb931a43994c9683d0922f1
+  - enabled: 1
+    path: Assets/Scenes/MenuUI.unity
+    guid: 497b7037010914d45864120fd97afc0a
+  - enabled: 1
+    path: Assets/Scenes/BonkQuotes.unity
+    guid: a7dcfe030ac6abf4ca050fa444bcff1c
+
   m_configObjects: {}
