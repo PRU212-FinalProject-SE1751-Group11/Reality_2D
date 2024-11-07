@@ -1515,7 +1515,7 @@ GameObject:
   - component: {fileID: 911311572}
   - component: {fileID: 911311571}
   - component: {fileID: 911311573}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: MainMenu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2274,6 +2274,7 @@ RectTransform:
   m_Children:
   - {fileID: 2112526292}
   - {fileID: 250335712}
+  - {fileID: 911311570}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -2714,3 +2715,4 @@ SceneRoots:
   - {fileID: 1686347537}
   - {fileID: 1735566649}
   - {fileID: 851439296}
+  - {fileID: 1455417376}
